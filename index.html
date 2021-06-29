@@ -1,5 +1,118 @@
-<html lamg="en">
-  <body>
+<html lang="en">
+
+<body>
+  <!-- For and While implementation -->
+  <!-- <script>
+    for (var ind = 0; ind < 20; ind++) {
+      console.log(ind)
+    }
+    for (var ind = 0; ind < 100; ind += 5) {
+      console.log(ind)
+    }
+    for (var ind = 0; ind > -20; ind -= 2) {
+      console.log(ind)
+    }
+    var ind = 0
+    while (ind < 20) {
+      console.log(ind)
+      ind++
+    }
+    var ind = 0
+    while (ind < 100) {
+      console.log(ind)
+      ind += 5
+    }
+    var ind = 0
+    while (ind > -20) {
+      console.log(ind)
+      ind -= 2
+    }
+  </script> -->
+  <input id='t1'>
+  <button onclick="Display()">Click to display </button> <br>
+  <input id='t2'>
+  <script>
+    function Display() {
+      var t1 = document.getElementById('t1')
+      var t2 = document.getElementById('t2')
+      t2.value = 'welcome ' + t1.value
+
+      isNaN(t1.value) ? console.log('Not a Number') : console.log('Is a Number')
+
+      var str = t1.value
+      console.log(str.length)
+      console.log(str.charAt(5))
+      console.log(str.substring(0, 5))
+      console.log(str.toLowerCase())
+    }
     
-   </body>
+    var ar = [2, 10, 5, 1, 5, 6, 8]
+    var ar2 = [2, 10]
+
+    function sumArray(arr) {
+      var sum = 0
+      for (let index = 0; index < arr.length; index++) {
+        if (typeof (arr[index]) == 'number')
+          sum += arr[index]
+      }
+      return sum
+    }
+    function isArrayNumber(arr) {
+      for (let index = 0; index < arr.length;) {
+        if (typeof (arr[index]) != 'number')
+          return false
+        else index++
+      }
+      return true
+    }
+
+    function PrintArrayNonOdd(arr) {
+      for (let index = 0; index < arr.length; index++) {
+        if (typeof (arr[index]) == 'number')
+          if ((arr[index] % 2) == '0')
+            console.log(arr[index])
+      }
+    }
+    function PrintMinArray(arr) {
+      var minArray=arr[0]
+      for (let index = 0; index < arr.length;index++ ) {
+        if (typeof (arr[index]) == 'number')
+          if (minArray > arr[index])
+              minArray =arr[index]
+      }
+      console.log(minArray)
+    }
+    function PrintArrayNonOdd(arr) {
+      var modVar = 0
+      for (let index = 0; index < arr.length; index++) {
+        if (typeof (arr[index]) == 'number')
+          if ((arr[index] % 2) == '0')
+            console.log(arr[index])
+      }
+    }
+    function AverageArray(arr) {
+      return sumArray(arr)/arr.length
+      }
+    
+    function longerArray (arr1,arr2){
+      // if (arr1.length<arr2.length)
+      //   return arr2
+      // else
+      //   return arr1
+      return arr1.length < arr2.length ? arr2 : arr1
+    }
+    function returnArrayPlace (arr,place){
+      return arr[place]
+    }
+    
+    PrintMinArray(ar)
+    PrintArrayNonOdd(ar)
+    console.log(sumArray(ar))
+    console.log(isArrayNumber(ar) ? 'all array is number' : 'Not all array is number')
+    console.log(AverageArray(ar))
+    console.log(returnArrayPlace(ar,0))
+  </script>
+
+</body>
+
 </html>
